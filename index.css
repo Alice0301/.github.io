@@ -1,0 +1,370 @@
+/* test.css */
+/* 基本設定 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 300px;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: #f0f0f0;   
+}
+
+body a{
+    font-family: "LXGW WenKai Mono TC", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+nav {
+    background-color: #D4B483;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    flex:0.2;
+    object-fit: contain;
+    max-width: 250px;
+    height: auto;
+    transition: opacity 0.3s;
+    
+}
+nav ul {
+    flex:0.7;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    padding-right: 30px;
+  
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px; /* 左右間距 */
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* 可以根據需要調整顏色 */
+    display: block;
+    font-size: 3rem;
+    white-space: nowrap;
+    font-family: "Special Elite", system-ui;
+    font-style: normal;
+}
+
+/*nav*/
+
+/* main */
+main {
+    max-width: 1200px;
+    padding: 2rem 0;
+    background-image: url('image/1.png');
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-color: #C6C4AC; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.profile{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start; 
+}
+
+.info, .info2 {
+    color: #0e0e0e;
+    padding-bottom: 20px;
+    font-size: 1.6rem;
+    font-family: "Special Elite", system-ui;
+    font-style: normal;
+    padding-left: 40px;
+}
+.info span, .info2 span {
+    display: inline-block;
+    border-bottom: 2px solid black;
+    width: 300px; /* 同長度底線！！不可山 */
+    font-family: "Special Elite", system-ui;
+    font-style: normal;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-bottom: -2px; 
+    padding: 0;
+    position: relative;  
+    
+}
+
+.info br, .info2 br {
+    line-height: 2;
+}
+
+.info p, .info2 p{
+    display: inline-block;
+    border-bottom: 4px solid black;
+    width: 300px;
+    font-family: "Special Elite", system-ui;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    
+}
+
+
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.me img {
+    width: 350px;
+    height:350px; 
+    object-fit: cover;
+    /*不變形*/
+    margin-bottom: 40px;
+   
+}
+
+
+
+
+
+.me{
+    flex: 1;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.me p{
+    font-size: 1.5rem;
+    font-family: "Special Elite", system-ui;
+    font-style: normal;
+    white-space: nowrap;
+    line-height: 1.5;
+ 
+}
+.me .rul284{
+    font-size: 1.5rem;
+    font-family: "Noto Serif SC", serif;
+    font-style: normal;
+    white-space: nowrap;
+    margin-bottom: 7rem;
+}
+
+h1{
+    font-size: 4rem;
+    color: #291b5c;
+    width: auto; 
+    white-space: nowrap;
+    font-family: "Noto Serif SC", serif;
+    margin-bottom: 20px;
+
+ 
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+.music-albums {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+.music-albums img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    background-color: #4a4a4a;
+}
+
+footer img {
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+footer img:hover {
+    opacity: 1;
+}
+/* 響應式設計 */
+/* 媒體查詢 - 針對手機螢幕 */
+@media (max-width: 768px) {
+    /* 導航欄調整 */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav img {
+        margin-bottom: 1rem;
+        max-width: 200px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;  /* 上下間距 */
+        text-align: center;
+    }
+
+    /* 主要內容區調整 */
+    main {
+        padding: 1rem;
+        min-height: 100px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        line-height: 1.5;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 個人資料區塊調整 */
+    .profile {
+        width: 100%;
+        align-items: center;
+        order: 2; /* 調整顯示順序 */
+    }
+
+    .info, .info2 {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .info p, .info2 p {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 照片和名字區塊調整 */
+    .me {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .me img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .me h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .me p {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    /* 音樂專輯區域調整 */
+    .music-albums {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .music-albums img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* 頁尾社交圖標調整 */
+    footer {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    footer img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
